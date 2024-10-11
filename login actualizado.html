@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Corpsrtony</title>
+
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilos del contenedor del formulario */
+        #form {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Imagen de perfil */
+        .profile-picture {
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #333;
+        }
+
+        /* Estilos de los inputs */
+        .box {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Estilos del botón */
+        .buttonsoli {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .buttonsoli:hover {
+            background-color: #45a049;
+        }
+
+        /* Botón de solicitar cuenta */
+        a button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2196F3;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        a button:hover {
+            background-color: #1976D2;
+        }
+
+        /* Adaptación para dispositivos móviles */
+        @media (max-width: 768px) {
+            #form {
+                width: 90%;
+                padding: 30px;
+            }
+
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="parent">
+    </div>
+
+    <center>
+        <main id="form">
+            <h2>CorpSRTony</h2>
+
+            <!-- Imagen de perfil -->
+            <div class="profile-picture">
+                <img src="https://i.postimg.cc/vm0B75Rd/JTL.png" alt="Foto de perfil" class="profile-img">
+            </div>
+
+            <!-- Formulario de login -->
+            <form name="login">
+                <input class="box" type="text" name="userid" placeholder="Usuario..." />
+                <input type="password" class="box" name="pswrd" placeholder="Contraseña..." />
+                <input class="buttonsoli" type="button" onclick="check(this.form)" value="Iniciar sesión" />
+            </form>
+
+            <!-- Enlace para solicitar cuenta -->
+            <a href="https://tusredessociales.com"> 
+                <button>Solicitar cuenta</button>
+            </a>
+        </main>
+    </center>
+
+    <!-- Validación del formulario -->
+    <script language="javascript">
+        function check(form) {
+            if (form.userid.value == "admin" && form.pswrd.value == "12345") {
+                window.location = "dashboard.html"; // Redirige al dashboard o página de éxito
+            } else {
+                alert("Usuario o contraseña incorrectos.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
